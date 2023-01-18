@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import CreateContainer from './CreateContainer';
+import React from 'react';
+import { useState } from 'react';
+import ToDoList from './ToDoList';
 
 function App() {
+  const [toDoArr, setToDo] = useState([])
+  const [word, setWord] = useState({'words': '', 'key': ''})
+  const [edit, setEdit] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wholeThing">
+        <CreateContainer setToDo={setToDo} toDo={toDoArr} word={word} setWord={setWord} edit={edit} setEdit={setEdit}/>
+        {toDoArr.length >= 1? toDoArr.map(toDo => <ToDoList setToDo={setToDo} toDo={toDo} setWords={setWord} word={word} setEdit={setEdit}/>) : null}
     </div>
-  );
+  )
 }
 
 export default App;

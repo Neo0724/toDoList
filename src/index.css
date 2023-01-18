@@ -1,13 +1,130 @@
-body {
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url('./Images/background.jpg');
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.create {
+  width: 450px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(251, 249, 249);
 }
+
+.create * {
+  height: 40px;
+}
+
+.inputToDo {
+  width: 270px;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border-radius: 7px;
+  border: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.editDoneBtn,
+.addBtn {
+  font-weight: bold;
+  border: none;
+  background-color: white;
+}
+
+.listContainer {
+  width: 450px;
+  height: 50px;
+  background-color: rgb(241, 240, 240);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delBtn {
+  margin-right: 5px;
+}
+.listContainer .doneBtn {
+  margin: 0 5px;
+}
+
+.editBtn,
+.doneBtn,
+.delBtn {
+  margin: 0 5px;
+  height: 35px;
+  border: none;
+  background-color: none;
+  border-radius: 4px;
+  transition: opacity 500ms;
+}
+
+.addBtn,
+.editDoneBtn {
+  background-color: lightgreen;
+  transition: opacity 500ms;
+  border-radius: 5px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+  width: 40px;
+  color: white;
+}
+
+.editDoneBtn {
+  min-width: 65px;
+}
+
+.editDoneBtn {
+  font-size: 20px;
+}
+
+.editBtn:hover,
+.doneBtn:hover,
+.delBtn:hover,
+.editDoneBtn:hover,
+.addBtn:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.editBtn:active,
+.doneBtn:active,
+.delBtn:active
+.editDoneBtn:active,
+.addBtn:active {
+  opacity: .5;
+}
+
+
+.list {
+  width: 80%;
+  margin: 10px 10px;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.delImg {
+  height: 32px;
+  width: 32px;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
